@@ -1,0 +1,256 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1 rem;
+}
+
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+body {
+    background-color:#c2bfbf; 
+}
+
+
+section {
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li {
+    margin-bottom: 5px;
+    
+}
+
+h2 {text-align: center;
+}
+
+
+/*Navegador*/  
+
+.header-nav {
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    justify-content: end;
+    background-color:#4d4b4b;
+    border-radius: 1rem; /*redondea la puntas*/
+    box-shadow: .5rem 0 .5rem rgba(54, 54, 54, 0.7); /*le da sombra*/
+}
+.nav-ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;/*espacio entre elementos*/
+    align-items: center;
+    justify-content:end;
+    color:antiquewhite;
+}
+
+.nav-ul a {
+    color: white;
+    text-decoration: none;
+}
+  
+
+.header-menu {
+    margin: 1.2rem 0 0;
+}
+
+
+/* Aplica estilos cuando se pasa el mouse por encima */
+.header-nav .header-menu:hover {
+    transform: scale(1.1);
+    color: rgb(236, 143, 22);
+}
+
+
+/*Main*/
+
+.contenedorMain {
+    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 40px; /* Espacio entre los elementos */
+    width: 100%;
+    min-height: 400px;/*definir la altura mínima de un elemento dado*/
+    text-align: center;/*alinear el contenido interno de un elemento de bloque.*/
+    text-justify: center;
+    border-radius: 1rem; /*redondea la puntas*/
+    box-shadow: .5rem 0 .5rem rgba(54, 54, 54, 0.7); /*le da sombra*/
+    background-color: antiquewhite;
+}
+
+
+.imagen img {
+    height: auto;
+    box-shadow: .5rem 0 .5rem rgba(54, 54, 54, 0.7);
+    border-radius: 1rem; /*redondea la puntas*/
+    min-height: 100px;
+    width: 60%;
+    border: 1px solid hsl(0, 1%, 14%);/* hace la linea del border*/
+}
+
+.descripcionMain {
+    flex: 1; /* El contenedor de descripción ocupará el espacio restante */
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.4 rem;
+    color: rgb(0, 0, 0);
+}
+
+.contenedorParrafos {
+    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 40px; /* Espacio entre los elementos */
+    width: 100%;
+    min-height: 400px;/*definir la altura mínima de un elemento dado*/
+    text-align: initial;/*alinear el contenido interno de un elemento de bloque.*/
+    text-justify: auto;
+    border-radius: 1rem; /*redondea la puntas*/
+    box-shadow: .5rem 0 .5rem rgba(54, 54, 54, 0.7); /*le da sombra*/
+    background-color: antiquewhite;
+    padding: 5rem 5rem;
+}
+
+/*Boton*/
+.button {
+    display: inline-block;
+    background-color: hsla(32, 100%, 77%, 0.774);
+    border: none; 
+    border-radius: 4rem;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    padding: 3px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*Formulario*/
+.formulario {
+    flex: 1;
+    background-color: rgb(252, 240, 230);
+    padding: 1rem;
+    text-align: center;
+    width: 90%;
+}
+
+.cont-dym {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 997px) {
+    .cont-dym {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+/*CONTACTO*/
+
+.list-iconos-celEmail{
+    display: flex;
+    list-style: none;
+}
+  
+.item-iconos-celEmail img {
+    padding: 10px;
+    height: 50px;
+}
+
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    padding: 30px 0px;
+    align-items: center;
+}
+
+.footer-texto p{
+    text-align: center;
+    padding: .3rem .3rem .1rem;
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: "MonteCarlo";
+    word-spacing: 0.1rem;
+    letter-spacing: .05rem;
+    line-height: 1.9rem;
+}
+
+
+.list-redes-sociales{
+    display: flex;
+    list-style: none;
+}
+  
+.item-redes-sociales img {
+    padding: 10px;
+    height: 50px;
+}
+
+/*Footer Media*/
+@media screen and (max-width: 800px) {
+    .footer-grid{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .footer-texto p {
+        margin: 0;
+    }
+} 
